@@ -49,6 +49,13 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
     </style>
 </head>
 <body class="bg-primary text-white">
@@ -79,9 +86,9 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu hidden md:hidden fixed inset-0 z-40 bg-primary/95 backdrop-blur-lg">
+    <div class="mobile-menu fixed inset-y-0 right-0 w-3/4 max-w-sm bg-primary/95 backdrop-blur-lg z-40 hidden md:hidden">
         <div class="flex flex-col items-center justify-center h-full space-y-8">
-            <button class="absolute top-4 right-4 p-2 text-white">
+            <button class="absolute top-4 right-4 p-2 text-white mobile-menu-close">
                 <i data-feather="x"></i>
             </button>
             <a href="#home" class="text-2xl font-medium hover:text-secondary">Home</a>
@@ -554,8 +561,8 @@
                         </div>
                     </div>
                 </div>
-                
-                
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -591,20 +598,33 @@
     <script>
         // Initialize feather icons
         feather.replace();
-        
+
         // Mobile menu toggle
         const mobileMenuButton = document.querySelector('.mobile-menu-button');
         const mobileMenu = document.querySelector('.mobile-menu');
-        const mobileMenuClose = mobileMenu.querySelector('button');
-        
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        // Toggle mobile menu when menu button is clicked
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('open');
         });
-        
+
+        // Close mobile menu when close button is clicked
         mobileMenuClose.addEventListener('click', () => {
             mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('open');
         });
-        
+
+        // Close mobile menu when any menu link is clicked
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('open');
+            });
+        });
+
         // Typing animation
         const typingText = document.querySelector('.typing-text');
         const phrases = [
@@ -622,10 +642,10 @@
         let charIndex = 0;
         let isDeleting = false;
         let isEnd = false;
-        
+
         function type() {
             const currentPhrase = phrases[phraseIndex];
-            
+
             if (isDeleting) {
                 typingText.textContent = currentPhrase.substring(0, charIndex - 1);
                 charIndex--;
@@ -633,7 +653,7 @@
                 typingText.textContent = currentPhrase.substring(0, charIndex + 1);
                 charIndex++;
             }
-            
+
             if (!isDeleting && charIndex === currentPhrase.length) {
                 isEnd = true;
                 setTimeout(() => {
@@ -643,14 +663,14 @@
                 isDeleting = false;
                 phraseIndex = (phraseIndex + 1) % phrases.length;
             }
-            
+
             const speedUp = Math.random() * (100 - 50) + 50;
             const normalSpeed = Math.random() * (200 - 100) + 100;
             const time = isEnd ? 2000 : isDeleting ? speedUp : normalSpeed;
-            
+
             setTimeout(type, time);
         }
-        
+
         setTimeout(type, 1000);
     </script>
 </body>

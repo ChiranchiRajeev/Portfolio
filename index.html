@@ -666,7 +666,7 @@
 
             const speedUp = Math.random() * (50 - 25) + 25;
             const normalSpeed = Math.random() * (100 - 50) + 50;
-            const time = isEnd ? 1000 : isDeleting ? speedUp : normalSpeed;
+            const time = isEnd ? 100 : isDeleting ? speedUp : normalSpeed;
 
             setTimeout(type, time);
         }

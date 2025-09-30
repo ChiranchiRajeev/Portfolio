@@ -658,20 +658,20 @@
                 isEnd = true;
                 setTimeout(() => {
                     isDeleting = true;
-                }, 1000);
+                }, 500);
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 phraseIndex = (phraseIndex + 1) % phrases.length;
             }
 
-            const speedUp = Math.random() * (100 - 50) + 50;
-            const normalSpeed = Math.random() * (200 - 100) + 100;
-            const time = isEnd ? 2000 : isDeleting ? speedUp : normalSpeed;
+            const speedUp = Math.random() * (50 - 25) + 25;
+            const normalSpeed = Math.random() * (100 - 50) + 50;
+            const time = isEnd ? 1000 : isDeleting ? speedUp : normalSpeed;
 
             setTimeout(type, time);
         }
 
-        setTimeout(type, 1000);
+        setTimeout(type, 500);
     </script>
 </body>
 </html>

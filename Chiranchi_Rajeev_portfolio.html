@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiranchi Rajeev | Data Science & AI Specialist</title>
+    <meta name="description" content="Portfolio of Chiranchi Rajeev, Data Science & AI Specialist">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#001F3F',
+                        secondary: '#00FF7F',
+                        accent: '#20B2AA',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #00FF7F, #20B2AA);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #00FF7F, #20B2AA);
+        }
+        .typing-text::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-primary text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-primary/90 backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold">Chiranchi Rajeev</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium hover:text-secondary">Home</a>
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium hover:text-secondary">About</a>
+                        <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium hover:text-secondary">Skills</a>
+                        <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium hover:text-secondary">Projects</a>
+                        <a href="#experience" class="px-3 py-2 rounded-md text-sm font-medium hover:text-secondary">Experience</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium hover:text-secondary">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md hover:text-secondary focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden fixed inset-0 z-40 bg-primary/95 backdrop-blur-lg">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <button class="absolute top-4 right-4 p-2 text-white">
+                <i data-feather="x"></i>
+            </button>
+            <a href="#home" class="text-2xl font-medium hover:text-secondary">Home</a>
+            <a href="#about" class="text-2xl font-medium hover:text-secondary">About</a>
+            <a href="#skills" class="text-2xl font-medium hover:text-secondary">Skills</a>
+            <a href="#projects" class="text-2xl font-medium hover:text-secondary">Projects</a>
+            <a href="#experience" class="text-2xl font-medium hover:text-secondary">Experience</a>
+            <a href="#contact" class="text-2xl font-medium hover:text-secondary">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Chiranchi Rajeev</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Data Science & AI Specialist</h2>
+                    <p class="text-lg mb-8 max-w-lg">Harnessing data science and AI to drive innovative solutions and meaningful impact in business and society.</p>
+                    
+                    <div class="mb-8">
+                        <p class="text-xl">Good at <span class="typing-text gradient-text font-medium"></span></p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://drive.google.com/file/d/1lifVixETcfuJ8AUv35RnTqexPFjv2f06/view?usp=sharing" download class="gradient-bg px-6 py-3 rounded-full font-medium text-white hover:opacity-90 transition">
+                            Download Resume
+                        </a>
+                        <a href="#projects" class="border-2 border-secondary px-6 py-3 rounded-full font-medium text-secondary hover:bg-secondary/10 transition">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQFsH1mxoNMzsw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711173899633?e=1762387200&v=beta&t=kKlYDIh7oUFingGG7Crr4ao4TT-KiVo2WKb0jqi0ccA" alt="Chiranchi Rajeev" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-secondary">
+                        <div class="absolute -bottom-5 -right-5 bg-secondary rounded-full p-3">
+                            <i data-feather="cpu" class="w-8 h-8 text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-primary/95">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center"><span class="gradient-text">About Me</span></h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Professional Bio</h3>
+                    <p class="mb-6 text-gray-300 leading-relaxed">
+                        A highly motivated and responsible Business Administration student specializing in Data Science and Artificial Intelligence at Woxsen University, committed to contributing to meaningful projects. With strong organizational skills, a positive attitude, and a knack for connecting with people, I excel in managing tasks efficiently and collaborating effectively in team settings.
+                    </p>
+                    <p class="mb-6 text-gray-300 leading-relaxed">
+                        Driven by a passion for learning and growth, I'm ready to take on new challenges and responsibilities to achieve shared goals. My experience includes data analysis internships, HR management training, and developing AI-powered web applications for salary prediction, endangered species risk assessment, and personalized travel experiences.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        I also actively volunteer in community initiatives, focusing on sustainability and support for underprivileged groups.
+                    </p>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6">Education</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-3 mr-4">
+                                <i data-feather="book" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">BBA in Data Science & Artificial Intelligence</h4>
+                                <p class="text-gray-400">Woxsen University (2023–2026)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-3 mr-4">
+                                <i data-feather="book-open" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Intermediate 2nd Year</h4>
+                                <p class="text-gray-400">FiitJee (2022–2023)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-3 mr-4">
+                                <i data-feather="book-open" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Intermediate 1st Year</h4>
+                                <p class="text-gray-400">Narayana College (2021–2022)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-3 mr-4">
+                                <i data-feather="bookmark" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">School-Level Education</h4>
+                                <p class="text-gray-400">Narayana E-Techno School (2012–2021)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-primary/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center"><span class="gradient-text">My Skills</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Languages -->
+                <div class="bg-primary/50 p-6 rounded-xl border border-gray-800 card-hover transition">
+                    <div class="flex items-center mb-4">
+                        <div class="gradient-bg p-2 rounded-lg mr-4">
+                            <i data-feather="globe" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Languages</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>English</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Telugu</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Hindi</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Programming -->
+                <div class="bg-primary/50 p-6 rounded-xl border border-gray-800 card-hover transition">
+                    <div class="flex items-center mb-4">
+                        <div class="gradient-bg p-2 rounded-lg mr-4">
+                            <i data-feather="code" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Programming</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Python</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Linear Regression</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Random Forest, XGBoost</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Naïve Bayes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Gradient Boosting</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Tools & Software -->
+                <div class="bg-primary/50 p-6 rounded-xl border border-gray-800 card-hover transition">
+                    <div class="flex items-center mb-4">
+                        <div class="gradient-bg p-2 rounded-lg mr-4">
+                            <i data-feather="tool" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Tools & Software</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Microsoft PowerPoint</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Microsoft Excel</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Microsoft Word</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Content Creation Tools</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Canva</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Streamlit</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Google Gemini AI</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Professional Skills -->
+                <div class="bg-primary/50 p-6 rounded-xl border border-gray-800 card-hover transition">
+                    <div class="flex items-center mb-4">
+                        <div class="gradient-bg p-2 rounded-lg mr-4">
+                            <i data-feather="award" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Professional</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Leadership</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Public Relations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Teamwork</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Content Creation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Problem-Solving</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 text-secondary mr-2"></i>
+                            <span>Recruitment Management</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-primary/95">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center"><span class="gradient-text">AI & Data Projects</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SETURA -->
+                <div class="bg-primary/50 rounded-xl border border-gray-800 overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-secondary to-accent flex items-center justify-center">
+                        <i data-feather="dollar-sign" class="w-16 h-16 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">SETURA</h3>
+                        <p class="text-gray-400 mb-4">AI Salary & Recruitment Platform</p>
+                        <p class="text-gray-300 mb-6">
+                            Developed an AI-powered web app for salary prediction, fairness analysis, and recruitment automation using Gradient Boosting Regressor.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <a href="https://setura.streamlit.app/" target="_blank" class="gradient-bg px-6 py-3 rounded-full font-medium text-white hover:opacity-90 transition">Live App</a>
+                            <button class="text-white bg-secondary px-4 py-2 rounded-full text-sm hover:bg-accent transition">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- JEEVANTARANG -->
+                <div class="bg-primary/50 rounded-xl border border-gray-800 overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-secondary to-accent flex items-center justify-center">
+                        <i data-feather="feather" class="w-16 h-16 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">JEEVANTARANG</h3>
+                        <p class="text-gray-400 mb-4">Endangered Species Risk Predictor</p>
+                        <p class="text-gray-300 mb-6">
+                            Built an AI tool to predict extinction risks for endangered species, analyzing factors like population decline and climate impact.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <a href="https://jeevantarang.streamlit.app/" target="_blank" class="gradient-bg px-6 py-3 rounded-full font-medium text-white hover:opacity-90 transition">Live App</a>
+                            <button class="text-white bg-secondary px-4 py-2 rounded-full text-sm hover:bg-accent transition">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- GLOBO Travel -->
+                <div class="bg-primary/50 rounded-xl border border-gray-800 overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-secondary to-accent flex items-center justify-center">
+                        <i data-feather="map" class="w-16 h-16 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">GLOBO Travel</h3>
+                        <p class="text-gray-400 mb-4">Personalized Travel Marketplace</p>
+                        <p class="text-gray-300 mb-6">
+                            Created a decision support system web app connecting small travel companies with customers for tailored recommendations.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <a href="https://globo-travel.streamlit.app/" target="_blank" class="gradient-bg px-6 py-3 rounded-full font-medium text-white hover:opacity-90 transition">Live App</a>
+                            <button class="text-white bg-secondary px-4 py-2 rounded-full text-sm hover:bg-accent transition">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-primary/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center"><span class="gradient-text">Experiences & Initiatives</span></h2>
+            
+            <div class="space-y-8">
+                <!-- Data Analyst Intern -->
+                <div class="bg-primary/50 p-6 rounded-xl border border-gray-800 card-hover transition">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold">Data Analyst Intern</h3>
+                            <p class="text-secondary">Unified Mentor (Apr–May 2025)</p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm">Internship</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                            <li>Built a Trip Demand Forecasting App using Streamlit, Random Forest, XGBoost, and Gradient Boosting for ~85% accurate forecasts</li>
+                            <li>Developed a YouTube Analytics Dashboard with Random Forest regression (R²: 99.77%) to predict earnings and optimize content strategy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- HR Manager Trainee -->
+                <div class="bg-primary/50 p-6 rounded-xl border border-gray-800 card-hover transition">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold">HR Manager Trainee</h3>
+                            <p class="text-secondary">Shine Projects (May–Jun 2025)</p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm">Training</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                            <li>Managed job postings on LinkedIn and Job Hai</li>
+                            <li>Screened applications, conducted interviews, and maintained recruitment databases</li>
+                            <li>Enhanced candidate selection processes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Social Internship -->
+                <div class="bg-primary/50 p-6 rounded-xl border border-gray-800 card-hover transition">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold">Social Internship</h3>
+                            <p class="text-secondary">Helping Society Foundation (May 2024–Present)</p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm">Volunteer</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                            <li>Raised ₹16,349 for orphanage necessities</li>
+                            <li>Organized community collection drives for sustainability</li>
+                            <li>Supported local vendors through the Share Your Love Program</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Awards -->
+                <div class="bg-primary/50 p-6 rounded-xl border border-gray-800 card-hover transition">
+                    <h3 class="text-xl font-semibold mb-4">Awards & Achievements</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-2 mr-3">
+                                <i data-feather="award" class="w-4 h-4 text-primary"></i>
+                            </div>
+                            <p class="text-gray-300">Winners of Case Crunch Competition (HiveBox Case)</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-2 mr-3">
+                                <i data-feather="award" class="w-4 h-4 text-primary"></i>
+                            </div>
+                            <p class="text-gray-300">Nominated for Best Social Internship Award (Woxsen University)</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-2 mr-3">
+                                <i data-feather="award" class="w-4 h-4 text-primary"></i>
+                            </div>
+                            <p class="text-gray-300">Best Volunteer (Helping Society Foundation)</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-2 mr-3">
+                                <i data-feather="award" class="w-4 h-4 text-primary"></i>
+                            </div>
+                            <p class="text-gray-300">2nd Place in NASA Ames Space Settlement Contest (Global, 2020)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-primary/95">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center"><span class="gradient-text">Get In Touch</span></h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-3 mr-4">
+                                <i data-feather="mail" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <a href="mailto:rajeev.chiranchi_2026@woxsen.edu.in" class="text-gray-400 hover:text-secondary transition">rajeev.chiranchi_2026@woxsen.edu.in</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-3 mr-4">
+                                <i data-feather="phone" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <a href="tel:+917013291682" class="text-gray-400 hover:text-secondary transition">+91-7013291682</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-3 mr-4">
+                                <i data-feather="linkedin" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">LinkedIn</h4>
+                                <a href="https://linkedin.com/in/chiranchi-rajeev" target="_blank" class="text-gray-400 hover:text-secondary transition">linkedin.com/in/chiranchi-rajeev</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-3 mr-4">
+                                <i data-feather="github" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">GitHub</h4>
+                                <a href="https://github.com/ChiranchiRajeev" target="_blank" class="text-gray-400 hover:text-secondary transition">github.com/ChiranchiRajeev</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold">Chiranchi Rajeev</span>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="mailto:rajeev.chiranchi_2026@woxsen.edu.in" class="text-gray-400 hover:text-secondary transition">
+                        <i data-feather="mail" class="w-5 h-5"></i>
+                    </a>
+                    <a href="tel:+917013291682" class="text-gray-400 hover:text-secondary transition">
+                        <i data-feather="phone" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/chiranchi-rajeev" target="_blank" class="text-gray-400 hover:text-secondary transition">
+                        <i data-feather="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://github.com/ChiranchiRajeev" target="_blank" class="text-gray-400 hover:text-secondary transition">
+                        <i data-feather="github" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <p>© 2023 Chiranchi Rajeev. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize feather icons
+        feather.replace();
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = mobileMenu.querySelector('button');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+        
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+        
+        // Typing animation
+        const typingText = document.querySelector('.typing-text');
+        const phrases = [
+            "Building AI Web Apps",
+            "Data Analysis",
+            "Machine Learning",
+            "Predictive Modeling",
+            "Recruitment Automation",
+            "Conservation Tools",
+            "Travel Platforms",
+            "Content Creation",
+            "Volunteer Initiatives"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isEnd = false;
+        
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isEnd = true;
+                setTimeout(() => {
+                    isDeleting = true;
+                }, 1000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
+            
+            const speedUp = Math.random() * (100 - 50) + 50;
+            const normalSpeed = Math.random() * (200 - 100) + 100;
+            const time = isEnd ? 2000 : isDeleting ? speedUp : normalSpeed;
+            
+            setTimeout(type, time);
+        }
+        
+        setTimeout(type, 1000);
+    </script>
+</body>
+</html>
